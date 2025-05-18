@@ -61,7 +61,7 @@ class Main {
         scanner.nextLine();
 
         ProductFilter filter = new KeywordFilter(keyword)
-                .and(new PriceRangeFilter(minPrice, Double.MAX_VALUE));
+                .and(new PriceRangeFilter(minPrice));
 
         displayProducts(productRepository.getFilteredProducts(filter));
     }
